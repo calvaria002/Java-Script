@@ -440,9 +440,44 @@ const rwOutput = `${x} % ${y} = ${rw}`;
 console.log(rwOutput);
 */
 
-// ........................................... Date Object Methods
+// ............................................DATE AND TIME
+/*
+let d;
 
-let x;
+d = new Date();
+
+d = d.toString();
+
+d = new Date(2021, 0, 10);
+// d = new Date(2021, 0, 10, 19, 20, 51); --- Time added
+
+d = new Date("2021-07-10");
+// d = new Date("2021-07-10T12:30:00"); ---- Timme added
+
+// d = new Date("07/10/2021 12:30:00"); --------- Same format
+
+// d = new Date("2021-07-10"); --- Puting the year first might put your date a day behind;
+
+// d = new Date("07-10-2022"); ---- Puts in the good way
+
+// TIME STAMP
+
+// d = Date.now(); Get TimeStamp down to millisecond
+
+// d = new Date("07-10-2020");
+// d = d.getTime(); get time stamp of the date
+// d = d.valueOf(); get time stamp of the date
+
+// d = new Date(1594364400000); get date and time from Time Stamp
+// d = Math.floor(Date.now() / 1000);  get date and time from Time Stamp without milliSecond
+
+console.log(d);
+*/
+
+// ........................................... Date Object Methods
+/*
+
+ let x;
 let d = new Date();
 
 // Get Time Stamp
@@ -451,7 +486,7 @@ x = d.valueOf();
 
 // Get
 x = d.getFullYear();
-x = d.getMonth();
+x = d.getMonth(); it is zero based +1 to get the exact month
 x = d.getDate();
 x = d.getDay();
 x = d.getHours();
@@ -473,7 +508,15 @@ x = d.toLocaleString("default", {
   day: "numeric",
   minutes: "numeric",
   second: "numeric",
-  timeZone: "Nigeria",
+  timeZone: "America/Ney_york",
 });
 
 console.log(x);
+*/
+
+// -----------------------------------------ARRAYS AND OBJECTS
+// - Arrays are a special type of object
+// - They can store multiple variables
+// - Values inside an array are surrounded in brackets and are called elements
+// - Elements can be any data types they can even be arrays within arrays
+// - Arrays ar 0 based
