@@ -520,3 +520,337 @@ console.log(x);
 // - Values inside an array are surrounded in brackets and are called elements
 // - Elements can be any data types they can even be arrays within arrays
 // - Arrays ar 0 based
+
+//  Array Literals
+/*
+const numbers = [12, 15, 60, 24, 78];
+
+console.log(numbers);
+
+//  Array Litterals
+
+const fruits = new Array("Apple", "Mango", "Banana", "Orange");
+
+console.log(fruits);
+
+let x;
+
+x = numbers[0];
+
+x = numbers[1] + numbers[3];
+
+x = `My best fruits are ${fruits[0]} and ${fruits[2]} `;
+
+x = numbers.length;
+
+fruits[2] = "Peach";
+
+// fruits.length = 2;  deciding specific lenght
+
+fruits[fruits.length] = "blueberry"; add an extra fruit
+fruits[fruits.length] = "Pear";
+
+console.log(fruits);
+*/
+
+// ...........................................ARRAY METHODS
+/*
+let x;
+
+const arr = [38, 48, 85, 84, 45];
+
+// arr.push(100); add to the end
+
+// arr.pop(); remove from the end
+
+// arr.unshift(99); add at the begining
+
+// arr.shift(); remove at the start
+
+// arr.reverse(); reverse it
+
+x = arr.includes(200); check if a data is in the array
+
+x = arr.indexOf(48); check the index of a data
+
+x = arr.slice(1, 4); select 1 - 3 data on the array , does not affect the array
+
+// x = arr.splice(1, 4); plug out 1-4 (it affects the array)
+
+// x = arr.splice(3, 1); plug out only index 3 on the array
+
+x = arr.splice(1, 4).reverse().toString().charAt(0);
+
+console.log(x);
+*/
+
+// -------------------------------------------- Nesting, Concat and Spread
+
+// -------------------------------------------- Nesting
+/*
+let x;
+
+const fruit = ["Apple", "Grape", "Orange"];
+const berries = ["Strawberries", "Blueberries", "Rasberry"];
+
+// fruit.push(berries);
+
+// x = fruit[3][1];
+
+const allFruits = [fruit, berries];
+
+x = allFruits[1][0];
+
+// --------------------------------------CONCAT
+
+x = fruit.concat(berries);
+
+// ------------------------------------------SPREAD
+let y;
+
+y = [...fruit, ...berries];
+
+// console.log(x, y);
+
+const arr = [2, 3, [4, 5], 6, 7, [8, 9], 10, 11];
+x = arr.flat();
+
+// Static Methods on Array Object
+
+x = Array.isArray(berries);
+
+x = Array.from("84798320");
+
+const a = 1;
+const b = 2;
+const c = 3;
+
+x = Array.of(a, b, c);
+
+console.log(x);
+*/
+
+// ------------------------------------------EXERCISE
+
+// const arr = [1, 2, 3, 4, 5];
+
+// arr.push(6);
+
+// arr.unshift(0);
+
+// arr.reverse();
+
+// console.log(arr);
+
+// const arr1 = [1, 2, 3, 4, 5];
+// const arr2 = [5, 6, 7, 8, 9, 10];
+
+// arr2.shift(0);
+
+// const arr3 = arr1.concat(arr2);
+
+// console.log(arr3);
+
+// --------------------------------------------Object Literal
+/*
+let x;
+
+const person = {
+  name: "John Doe",
+  age: 30,
+  isAdmin: true,
+  address: {
+    street: "25 lagos road",
+    city: "Boston",
+    state: "Lagos",
+  },
+  hobbies: ["football", "work-out"],
+};
+
+// x = person.name;
+// x = person["age"];
+// x = person.isAdmin;
+// x = person.address.city;
+// x = person.hobbies[0];
+
+person.name = "Jane Doe";
+person["isAdmin"] = false;
+person["name"] = "John Doe";
+
+delete person.age;
+
+person.hasChildren = true;
+
+person.greet = function () {
+  console.log(`Hello my name is ${this.name}`);
+};
+
+person.greet();
+
+const person2 = {
+  "first name": "Brad",
+  "Last name": "Pitt",
+};
+
+x = person2["First name"];
+
+console.log(x);
+*/
+
+// ------------------------------------------Objects Spread Operator & Methods
+/*
+let x;
+
+const todo = new Object();
+
+todo.id = 1;
+todo.name = "Buy milk";
+todo.completed = false;
+
+x = todo;
+
+const person = {
+  address: {
+    cords: {
+      lat: 86.9868,
+      lng: -34.5674,
+    },
+  },
+};
+
+x = person.address.cords.lat;
+
+const obj1 = { a: 1, b: 2 };
+const obj2 = { c: 3, d: 4 };
+
+const obj3 = { ...obj1, ...obj2 };
+const obj4 = Object.assign({}, obj1, obj2);
+
+const todos = [
+  { id: 1, name: "Buy Milk" },
+  { id: 2, name: "Pickup kids from school" },
+  { id: 3, name: "Take out trash" },
+];
+
+x = todos[0].name;
+x = Object.keys(todo);
+x = Object.keys(todo).lenght;
+x = Object.values(todo);
+x = Object.entries(todo);
+x = todo.hasOwnProperty("age");
+
+console.log(x);
+*/
+/*
+// ---------------------------------------------DEStructuring & Naming
+const firstName = "John";
+const lastName = "Doe";
+const age = 30;
+
+const person = {
+  firstName,
+  lastName,
+  age,
+};
+
+console.log(person.age);
+
+// Destructuring
+
+const todo = {
+  id: 1,
+  title: "Take out trash",
+  user: {
+    name: "John",
+  },
+};
+
+const {
+  id: todoId,
+  title,
+  user: { name },
+} = todo;
+
+console.log(todoId);
+
+// Destructure arrays
+
+const numbers = [23, 67, 33, 49];
+
+const [first, second, ...rest] = numbers;
+
+console.log(first, second, rest);
+*/
+
+// -------------------------------------------JSON
+/*
+const post = {
+  id: 1,
+  title: "Post One",
+  body: "This is the body",
+};
+
+// Convert to JSON String
+const str = JSON.stringify(post);
+
+console.log(str);
+
+// Parse JSON
+const obj = JSON.parse(str);
+
+console.log(obj.id);
+
+const posts = [
+  {
+    id: 1,
+    title: "Post One",
+    body: "This is the body",
+  },
+  {
+    id: 2,
+    title: "Post two",
+    body: "This is the body",
+  },
+];
+
+const str2 = JSON.stringify(posts);
+
+console.log(str2);
+*/
+
+// --------------------------------------------EXERCISES
+let x;
+
+const Library = [
+  {
+    title: "Law School",
+    author: "Mr Don",
+    status: {
+      own: true,
+      reading: false,
+      read: false,
+    },
+  },
+  {
+    title: "Law School",
+    author: "Mr Don",
+    status: {
+      own: true,
+      reading: false,
+      read: false,
+    },
+  },
+  {
+    title: "Law School",
+    author: "Mr Don",
+    status: {
+      own: true,
+      reading: false,
+      read: false,
+    },
+  },
+];
+
+Library[0].status.read = true;
+
+console.log(Library);
