@@ -819,6 +819,8 @@ console.log(str2);
 */
 
 // --------------------------------------------EXERCISES
+/*
+
 let x;
 
 const Library = [
@@ -853,4 +855,92 @@ const Library = [
 
 Library[0].status.read = true;
 
-console.log(Library);
+const { title: firstBook} = Library[0];
+
+console.log(firstBook);
+
+const libraryJSON = JSON.stringify(Library);
+
+console.log(libraryJSON);
+
+*/
+
+
+// --------------------------------------------Functions, Scope & Execution Context
+/*
+function sayHello() {
+  console.log("Hello World");
+}
+
+sayHello();
+
+function add(num1, num2) {
+  console.log(num1 + num2);
+}
+
+add(5, 23);
+
+function subtract(num1, num2) {
+  return num1 - num2;
+
+  // console.log("After the return");
+}
+
+const result = subtract(10, 2);
+
+console.log(result, subtract(20, 5));
+*/
+
+// -----------------------------------------Params & Arguments
+
+// Default Params
+
+function registerUser(user = "Bot") {
+  // if (!user) {
+        // user = "bot";  
+    // }
+    return user + " is registered ";
+}
+
+console.log(registerUser());
+
+// Rest Params 
+  function sum(...numbers) {
+    let total = 0;
+
+    for (const num of numbers){
+      total += num;
+    }
+
+    return total;
+  }
+
+  console.log( sum(1, 2, 3, 4, 5));
+
+  // Objects as Params
+  function loginUser(user) {
+    return `The user ${user.name} with the id of ${user.id} is logged in `;
+  }
+
+  const user = {
+    name: "John",
+    id:   1,
+  };
+
+  console.log(loginUser(user));
+  console.log(loginUser({
+    id: 2,
+    name: "Sara",
+  })
+);
+
+// Arrays as params
+function getRandom(arr){
+  const randomIndex = Math.floor(Math.random() * arr.length);
+
+  const item = arr[randomIndex];
+  
+  console.log(item);
+}
+
+getRandom([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
