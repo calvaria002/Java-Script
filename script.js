@@ -865,7 +865,6 @@ console.log(libraryJSON);
 
 */
 
-
 // --------------------------------------------Functions, Scope & Execution Context
 /*
 function sayHello() {
@@ -894,7 +893,7 @@ console.log(result, subtract(20, 5));
 // -----------------------------------------Params & Arguments
 
 // Default Params
-
+/*
 function registerUser(user = "Bot") {
   // if (!user) {
         // user = "bot";  
@@ -944,3 +943,4 @@ function getRandom(arr){
 }
 
 getRandom([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+*/
