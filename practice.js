@@ -1,3 +1,4 @@
+/*
 let firstName = "John";
 let lastName = "Doe";
 let age = 32;
@@ -104,3 +105,36 @@ client.ofAge = true;
 
 console.log(client.fName);
 console.log(client);
+
+function add(num1, num2) {
+  return num1 * num2;
+}
+
+const result = add(2, 5);
+
+console.log(result, add(10, 2));
+
+function sum(...numbers) {
+  let total = 0;
+
+  for (const num of numbers) {
+    total += num;
+  }
+
+  return total;
+}
+
+console.log(sum(1, 2, 3, 4, 5));
+*/
+
+function loginUser(user) {
+  return ` The user ${user.name} with the tag number of ${user.tagnum} has been succesfully logged in`;
+}
+
+const user = {
+  name: "John",
+  tagnum: 230012,
+  age: 23,
+};
+
+console.log(loginUser(user));

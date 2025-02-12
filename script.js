@@ -944,3 +944,147 @@ function getRandom(arr){
 
 getRandom([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
 */
+
+// ----------------------------------------------Global & Function Scope
+/*
+const x = 100;
+
+console.log(x, "in global");
+
+function run() {
+  console.log(window.innerHeight);
+  console.log(x, "in function");
+}
+
+run();
+
+if (true) {
+  console.log(x, "in block");
+}
+
+function add() {
+  const x = 1;
+  const y = 50;
+  console.log(x + y);
+}
+
+add();
+*/
+
+// --------------------------------------------Block Scope
+
+// --------------------------------------------Nested Scope
+/*
+function first() {
+  const x = 100;
+
+  function second() {
+    const y = 200;
+    console.log(x + y);
+  }
+
+  second();
+}
+
+first();
+
+if (true) {
+  const x = 150;
+
+  if (x === 150) {
+    const y = 250;
+    console.log(x + y);
+  }
+}
+*/
+
+// ----------------------------------------------Function Declaration vs Expression
+
+// Function Declaration
+/*
+function addDollarSign(value) {
+  return "$" + value;
+}
+
+console.log(addDollarSign(200));
+
+// Function Expression
+
+const addSumSign = function (value) {
+  return "+" + value;
+};
+
+console.log(addSumSign(200));
+*/
+// -------------------------------------------Arrow Functions
+/*
+// function add(a, b) {
+//   return a + b;
+// }
+
+// Arrow function syntax
+
+const add = (a, b) => {
+  return a + b;
+};
+
+// Implicit Return
+
+const substract = (a, b) => a - b;
+
+// Can leave off () with a single param
+
+const sum = (a) => a + 20;
+
+// Returning an object
+
+const createObj = () => ({
+  name: "Brad",
+});
+
+const numbers = [1, 2, 3, 4, 5];
+
+numbers.forEach(function (n) {
+  console.log(n);
+});
+
+// Arrow function in a cellback
+numbers.forEach((n) => console.log(n));
+
+console.log(createObj());
+
+console.log(sum(5));
+*/
+
+// --------------------------------------------------------IIFE (Immediately Invoked Function Expressions)
+/*
+(function () {
+  const user = "John";
+  console.log(user);
+  const hello = () => console.log("hello from the IFFE");
+  hello();
+})();
+
+(function (name) {
+  console.log("hello" + " " + name);
+})("shawn");
+
+(function hello() {
+  console.log("Hello");
+})();
+*/
+
+// --------------------------------------------------Exercise
+// 4:44
+function getCelsius(f) {
+  const celsius = ((f - 32) * 5) / 9;
+  return celsius;
+}
+
+getCelsius(50);
+
+// console.log(getCelsius(53));
+
+// const getCelsius = (f) => ((f - 32) * 5) / 9;
+
+console.log(getCelsius(53));
