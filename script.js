@@ -1075,7 +1075,7 @@ console.log(sum(5));
 */
 
 // --------------------------------------------------Exercise
-// 4:44
+/*
 function getCelsius(f) {
   const celsius = ((f - 32) * 5) / 9;
   return celsius;
@@ -1088,3 +1088,158 @@ getCelsius(50);
 // const getCelsius = (f) => ((f - 32) * 5) / 9;
 
 console.log(getCelsius(53));
+
+function getCelsius(f) {
+  const celsius = ((f = 32) * 5) / 9;
+  return celsius;
+}
+
+function letCelsius(f) {
+  return ((f = 32) * 5) / 9;
+}
+
+const getcelsius = (f) => ((f = 32) * 5) / 9;
+
+console.log(`The temperature is ${getcelsius(30)}`);
+console.log(getcelsius(30));
+console.log(letCelsius(30));
+console.log(getCelsius(30));
+
+function minMax(arr) {
+  const min = Math.min(...arr);
+  const max = Math.max(...arr);
+
+  return {
+    min,
+    max,
+  };
+}
+
+console.log(minMax([1, 2, 3, 4, 5]));
+
+
+(function (length, width) {
+  const area = length * width;
+  const output = `The area of the triangle with a of ${length} and width of ${width} is ${area}`;
+
+  console.log(output);
+})(10, 50);
+
+(function area(length, width) {
+  const areaResult = length * width;
+  const output = `The area of the triangle with a lenght of ${length} and width of ${width} is ${areaResult}`;
+  console.log(output);
+})(5, 10);
+
+  */
+
+// ---------------------------------------Execution Context
+// ========================================The Call Stack
+
+// ----------------------------------------------------If Statement
+/*
+if (true) {
+  console.log("This is true");
+}
+
+if (false) {
+  console.log("This is not true");
+}
+
+const x = 1;
+const y = 15;
+
+if (x >= y) {
+  console.log(`${x} is equal to or greater than ${y}`);
+}
+
+if (x === y) {
+  console.log(`${x} is equal to ${y}`);
+} else {
+  console.log(`${x} is not equal to ${y}`);
+}
+
+if (x !== y) {
+  const z = 20;
+  console.log(`${x} is ${z}`);
+}
+
+// Shorthand if
+if (x >= y)
+  console.log(`${x} is greater than or equal to ${y}`),
+    console.log("This is true");
+else console.log("This is false");
+
+// --------------------------------------------------------Else-If & Nesting
+
+// Else If
+
+const d = new Date(10, 30, 2022, 13, 0, 0);
+const hour = d.getHours();
+
+if (hour < 12) {
+  console.log("Good morning");
+} else if (hour < 18) {
+  console.log("Good afternon");
+} else {
+  console.log("Good night");
+}
+
+console.log(hour);
+
+// Nested If
+if (hour < 12) {
+  console.log("Good morning");
+
+  if (hour === 6) {
+    console.log("Wake up!!");
+  }
+} else if (hour < 18) {
+  console.log("Good afternon");
+} else {
+  console.log("Good night");
+
+  if (hour >= 20) {
+    console.log(zzzzzzz);
+  }
+}
+
+if (hour >= 7 && hour < 15) {
+  console.log("it is work time!");
+}
+
+if (hour === 6 || hour === 20) {
+  console.log("Brusj your teeth!");
+}
+*/
+
+// -------------------------------------------------------Switches
+
+const d = new Date(2023, 3, 4, 12, 0, 0);
+const month = d.getMonth();
+const hour = d.getHours();
+
+switch (month) {
+  case 1:
+    console.log("This ia Jan");
+    break;
+  case 2:
+    console.log("This ia Feb");
+    break;
+  case 3:
+    console.log("This ia Mar");
+    break;
+  default:
+    console.log(`it is not Jan, Feb or Match`);
+}
+
+switch (true) {
+  case hour < 12:
+    console.log("Good morning");
+    break;
+  case hour < 18:
+    console.log("Good Afternoon");
+    break;
+  default:
+    console.log("Good night");
+}
