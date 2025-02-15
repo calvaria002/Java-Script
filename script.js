@@ -1214,7 +1214,7 @@ if (hour === 6 || hour === 20) {
 */
 
 // -------------------------------------------------------Switches
-
+/*
 const d = new Date(2023, 3, 4, 12, 0, 0);
 const month = d.getMonth();
 const hour = d.getHours();
@@ -1243,3 +1243,282 @@ switch (true) {
   default:
     console.log("Good night");
 }
+
+// ------------------------------------------------------Exercises
+/*
+ function calculator (num1, num2, operator) {
+    let result;
+  if (operator == "+" ) {
+    result = num1 + num2;
+  } else if (operator == "-") {
+     result = num1 - num2;
+  } else if ( operator = "/" ) {
+     result = num1 / num2;
+  }else if (operator == "*" ) {
+     result = num1 * num2;
+  }else {
+    console.log("Invalid Operator");
+  }
+
+   return result;
+
+ }
+
+ console.log( calculator(5, 29, "+" ));
+
+/*
+function calculator(num1, num2, operator) {
+  let result;
+
+  switch (operator) {
+    case "+":
+      result = num1 + num2;
+      break;
+    case "-":
+      result = num1 - num2;
+      break;
+    case "*":
+      result = num1 * num2;
+      break;
+    case "/":
+      result = num1 / num2;
+      break;
+    default:
+      console.log("invalid operator");
+  }
+
+  console.log(result);
+  return result;
+  
+
+}
+
+calculator(10, 12, "+");
+*/
+
+// -----------------------------------------------Truthy and Falsie value
+
+// Falsy Values:
+// - false
+// - 0
+// - "" or '' (empty strings without space)
+// - null
+// - undefined
+// - NaN
+
+// Truthy Values:
+// - Everything else that is not falsy
+// - true
+// - "0"
+// - " "   (space in a string)
+// - "false"
+// - [] (empty array)
+// - {} (empty object)
+// - function () {} (empty function)
+
+// Truthy and falsy caveats
+/*
+const myChildren = 3;
+
+if (myChildren) {
+  console.log(`You have ${myChildren} children`);
+} else {
+  console.log(`Enter number of Children`);
+}
+
+const children = 0;
+
+// if (children !== undefined) {
+//   console.log(`You have ${children} children`);
+// } else {
+//   console.log(`Enter number of Children`);
+// }
+
+//                         OR
+
+if (!isNaN(children)) {
+  console.log(`You have ${children} children`);
+} else {
+  console.log(`Enter number of Children`);
+}
+
+// Checkin for empty arrays
+
+// const posts = ["Post 1", "Post 2"];
+
+// if (posts) {
+//   console.log("list post");
+// } else {
+//   console.log("No pst to list");
+// }
+
+//  If the array is empty
+
+// const posts = [];
+
+// if (posts.length > 0) {
+//   console.log("list post");
+// } else {
+//   console.log("No pst to list");
+// }
+
+// Checking for empty objects
+
+// const users = {
+//   name: "Jhon",
+// };
+
+// if (users) {
+//   console.log("list user");
+// } else {
+//   console.log("no user list");
+// }
+
+// const users = {};
+
+// if (Object.keys(users).length > 0) {
+//   console.log("list user");
+// } else {
+//   console.log("no user list");
+// }
+
+// Loose Equality (==)
+// console.log(false == 0);
+// console.log("" == 0);
+// console.log(null == undefined);
+
+// console.log(false === 0);
+// console.log("" === 0);
+// console.log(null === undefined);
+*/
+
+// Logical Operators
+/*
+console.log(10 < 20 && 30 > 15 && 40 > 30);
+console.log(10 > 20 || 30 < 15);
+
+// && - will return first falsy value or the last value
+let a;
+
+a = 10 && 20;
+a = 10 && 20 && 30;
+a = 10 && 0 && 30;
+a = 10 && "" && 0 && 30;
+
+console.log(a);
+
+const post = ["Post one", "Post two"];
+post.length > 0 && console.log(post[0]);
+
+// || - Will return he firdt truthy value or the last value
+
+let b;
+
+b = 10 || 20;
+b = 0 || 20;
+b = 0 || null || "" || undefined;
+
+console.log(b);
+
+// ?? - Returns the right side operand awhen the left is null or undefined
+
+let c;
+
+c = 10 ?? 20;
+c = null ?? 20;
+c = undefined ?? 30;
+c = 0 ?? 30;
+c = "" ?? 30;
+
+console.log(c);
+*/
+
+// Logical Assignment
+/*
+// ||= assigns the right side value only if the  left is a falsey value
+
+let a = null;
+
+// if (!a) {
+//   a = 10;
+// }
+
+// a = a || 10;
+
+a ||= 10;
+
+console.log(a);
+
+// &&= assigns the right side only if the left is a truthy value
+
+let b = 10;
+
+// if (b) {
+//   b = 20;
+// }
+
+// b = b && 20;
+
+b &&= 20;
+
+console.log(b);
+
+// ??= assigns the right side value only if the left is null or undefined.
+
+let c = null;
+
+// if (c === null || c === undefined) {
+//   c = 20;
+// }
+
+// c = c ?? 20;
+
+c ??= 20;
+
+console.log(c);
+*/
+
+// -----------------------------------------Ternary Operator
+
+const age = 20;
+
+// Using an if statement
+
+if (age >= 18) {
+  console.log("You can vote");
+} else {
+  console.log("you can not vote");
+}
+
+// Using a ternary operator
+age >= 18 ? console.log("you can vote!") : console.log("you can not vote");
+
+// Assigning a conditional value to a variable
+const canVote = age >= 18 ? true : false;
+const canVote2 = age >= 18 ? "You can Vote!" : "You can not Vote";
+
+console.log(canVote);
+console.log(canVote2);
+
+// Multiple statement
+
+const auth = false;
+// let redirect;
+
+// if (auth) {
+//   alert("Welcome to the dashboard");
+//   redirect = "/dashboard";
+// } else {
+//   alert("Access Denied");
+//   redirect = "/login";
+// }
+
+// const redirect = auth
+//   ? (alert("Welcome to the dashboard"), "/dashboard")
+//   : (alert("Access Dennied"), "/login");
+
+// console.log(redirect);
+
+// auth ? console.log("Welcome to the dashboard") : null;
+
+// auth && console.log("Welcome to the dashboard");
