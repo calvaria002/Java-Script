@@ -1479,7 +1479,7 @@ console.log(c);
 */
 
 // -----------------------------------------Ternary Operator
-
+/*
 const age = 20;
 
 // Using an if statement
@@ -1499,10 +1499,10 @@ const canVote2 = age >= 18 ? "You can Vote!" : "You can not Vote";
 
 console.log(canVote);
 console.log(canVote2);
-
+*/
 // Multiple statement
 
-const auth = false;
+// const auth = false;
 // let redirect;
 
 // if (auth) {
@@ -1522,3 +1522,142 @@ const auth = false;
 // auth ? console.log("Welcome to the dashboard") : null;
 
 // auth && console.log("Welcome to the dashboard");
+
+// ---------------------------------------------------Loop & High Order Array Method
+/*
+// for (let i = 0; i <= 10; i++) {
+//   console.log("Number " + i);
+// }
+
+// for (let i = 0; i <= 10; i++) {
+//   if (i === 7) {
+//     console.log(`${i} is my favourite number`);
+//   } else {
+//     console.log("Number " + i);
+//   }
+// }
+
+// Nest loops
+for (let i = 0; i <= 10; i++) {
+  console.log("Number " + i);
+
+  for (let j = i; j <= 10; j++) {
+    console.log(`${i} * ${j} = ${i * j} `);
+  }
+}
+
+// Loop through an array
+const names = ["Brad", "Sam", "Sara", "John", "Tim"];
+
+for (let i = 0; i < names.length; i++) {
+  if (i === 2) {
+    console.log(names[i] + ` is the best`);
+  } else {
+    console.log(names[i]);
+  }
+}
+*/
+
+// -------------------------------------------------Exercise
+/*
+function age(dob) {
+  return 2025 - dob;
+}
+
+console.log(age(2002));
+*/
+
+// ---------------------------------------------Break & Continue
+/*
+// Break
+for (let i = 0; i <= 20; i++) {
+  if (i === 10) {
+    console.log("breaking...");
+    break;
+  }
+  console.log(i);
+}
+
+// Continue
+for (let i = 0; i <= 20; i++) {
+  if (i === 12) {
+    console.log("skipping 12...");
+    continue;
+  }
+  console.log(i);
+}
+*/
+
+// ---------------------------------------- While & Do While Loop
+
+// let i = 1;
+
+// while (i <= 20) {
+//   console.log("Number " + i);
+//   i++;
+// }
+
+//  Loop over Arrays
+// let i = 1;
+// const arr = [10, 20, 30, 40, 50];
+
+// while (i < arr.length) {
+//   console.log(arr[i]);
+//   i++;
+// }
+
+// Nesting while loops
+
+// let i = 0;
+
+// while (i <= 5) {
+//   console.log("Number " + i);
+
+//   let j = 1;
+//   while (j <= 5) {
+//     console.log(`${i} * ${j} = ${i * j}`);
+//     j++;
+//   }
+
+//   i++;
+// }
+
+// Do while loop == Do whle loop runs atleast 1s even is the conditions are met
+
+// let i = 21;
+
+// do {
+//   console.log(`Number ` + i);
+//   i++;
+// } while (i <= 21);
+
+//------------------------------------------Execises FizzBuzz Challenge
+/*
+for (let i = 1; i <= 100; i++) {
+  if ((i % 5 === 0) & (i % 3 === 0)) {
+    console.log("FizzBuzz");
+  } else if (i % 5 === 0) {
+    console.log("Buzz");
+  } else if (i % 3 === 0) {
+    console.log("Fizz");
+  } else {
+    console.log(i);
+  }
+}
+
+let j = 0;
+
+while (j <= 100) {
+  if ((j % 5 === 0) & (j % 3 === 0)) {
+    console.log("FizzBuzz");
+  } else if (j % 5 === 0) {
+    console.log("Buzz");
+  } else if (j % 3 === 0) {
+    console.log("Fizz");
+  } else {
+    console.log(j);
+  }
+
+  j++;
+}
+*/
