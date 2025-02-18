@@ -1724,3 +1724,54 @@ for (const key in colorArr) {
   console.log(colorArr[key]);
 }
 */
+
+// ---------------------------------------------Array for each
+
+// const socials = ["Twitter", "Linkedin", "Instagram", "Facebook"];
+
+// console.log(socials.__proto__);
+
+// socials.forEach(function (item) {
+//   console.log(item);
+// });
+
+// socials.forEach((item) => console.log(item));
+// socials.forEach((item, index, arr) => console.log(`${index} - ${item}`));
+
+// function logSocials(social) {
+//   console.log(social);
+// }
+
+// socials.forEach(logSocials);
+
+// For Objectives
+
+// const socialObjs = [
+//   { name: "Twitter", url: "https://twitter.com" },
+//   { name: "Facebook", url: "https://facebook.com" },
+//   { name: "Linkedin", url: "https://linkedin.com" },
+//   { name: "Instagram", url: "https://instagram.com" },
+// ];
+
+// socialObjs.forEach((item) => console.log(item));
+
+//------------------------------------------------- Array.filter
+
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// const evenNumbers = numbers.filter(function (number) {
+//   return number % 2 === 0;
+// });
+
+// Short version
+// const evenNumbers = numbers.filter((number) => number % 2 === 0);
+
+// Same wih forEach
+const evenNumbers = [];
+numbers.forEach((number) => {
+  if (number % 2 === 0) {
+    evenNumbers.push(number);
+  }
+});
+
+console.log(evenNumbers);
