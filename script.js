@@ -1664,6 +1664,7 @@ while (j <= 100) {
 
 // -------------------------------------------------For Of Loop
 // Loop through arrays
+/*
 const items = ["boom", "Chair", "Spoon", "Knive"];
 
 for (const item of items) {
@@ -1701,3 +1702,25 @@ map.set("age", 30);
 for (const [key, value] of map) {
   console.log(key, value);
 }
+*/
+
+// -----------------------------------------------For In
+/*
+const colorObj = {
+  color1: "red",
+  color2: "pink",
+  color3: "yellow",
+  color4: "green",
+  color5: "blue",
+};
+
+for (const key in colorObj) {
+  console.log(key, colorObj[key]);
+}
+
+const colorArr = ["red", "blue", "gray"];
+
+for (const key in colorArr) {
+  console.log(colorArr[key]);
+}
+*/
