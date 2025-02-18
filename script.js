@@ -1661,3 +1661,43 @@ while (j <= 100) {
   j++;
 }
 */
+
+// -------------------------------------------------For Of Loop
+// Loop through arrays
+const items = ["boom", "Chair", "Spoon", "Knive"];
+
+for (const item of items) {
+  console.log(item);
+}
+
+const users = [
+  {
+    name: "Chad",
+  },
+  {
+    name: "Dave",
+  },
+  {
+    name: "Eve",
+  },
+];
+
+for (user of users) {
+  console.log(user.name);
+}
+
+// Loop Over Strings
+const str = "Hello World";
+
+for (const letter of str) {
+  console.log(letter);
+}
+
+// Loop over Maps
+const map = new Map();
+map.set("name", "John");
+map.set("age", 30);
+
+for (const [key, value] of map) {
+  console.log(key, value);
+}
