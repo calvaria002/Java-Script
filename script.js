@@ -1935,7 +1935,7 @@ console.log(students);
 
 // ------------------------------------------------MAP
 
-const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 // const doubleNumbers = numbers.map((number) => number * 2);
 // console.log(doubleNumbers);
 // console.log(numbers);
@@ -1948,7 +1948,7 @@ const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 // });
 
 // console.log(doubleNumbers);
-
+/*
 const students = [
   {
     name: "Mike",
@@ -2063,13 +2063,14 @@ const students = [
     Dept: "Electrical Engineering",
   },
 ];
-
+*/
 //  Create an array of Students names
 
-const studentsNames = students.map((student) => student.name);
-console.log(studentsNames);
+// const studentsNames = students.map((student) => student.name);
+// console.log(studentsNames);
 
 //  Create an array of Students names and department
+/*
 const studentsNamesDept = students.map((student) => {
   return {
     name: student.name,
@@ -2077,7 +2078,7 @@ const studentsNamesDept = students.map((student) => {
   };
 });
 console.log(studentsNamesDept);
-
+*/
 // CHAIN MAP METHODS
 
 // const sqaureroot = numbers
@@ -2104,8 +2105,120 @@ console.log(sqaureroot);
 */
 
 // Chaining different methods
+/*
 const evenDouble = numbers
   .filter((number) => number % 2 === 0)
   .map((number) => number * 2);
 
 console.log(evenDouble);
+*/
+
+// ---------------------------------------------------REDUCE
+/*
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// const total = numbers.reduce((acc, cur) => acc + cur, 0);
+// console.log(total);
+
+//  Long Format
+const total = numbers.reduce(function (acc, cur) {
+  return acc + cur;
+}, 0);
+console.log(total);
+
+// Using for loop
+const sum = () => {
+  let acc = 0;
+  for (const cur of numbers) {
+    acc += cur;
+  }
+  return acc;
+};
+console.log(sum());
+
+const cart = [
+  { id: 1, name: "Product 1", price: 130 },
+  { id: 2, name: "Product 2", price: 150 },
+  { id: 3, name: "Product 3", price: 175 },
+];
+
+const totalPrice = cart.reduce((acc, cur) => acc + cur.price, 0);
+console.log(totalPrice);
+*/
+
+// ----------------------------------------------EXERCISE
+/*
+const people = [
+  {
+    firstName: "John",
+    lastName: "Doe",
+    email: "John@gmail.com",
+    phone: "111-111-111",
+    age: 30,
+  },
+  {
+    firstName: "Jane",
+    lastName: "Poe",
+    email: "Jane@gmail.com",
+    phone: "222-222-222",
+    age: 25,
+  },
+  {
+    firstName: "Job",
+    lastName: "Foe",
+    email: "Job@gmail.com",
+    phone: "333-333-333",
+    age: 45,
+  },
+  {
+    firstName: "Sara",
+    lastName: "Soe",
+    email: "sara@gmail.com",
+    phone: "444-444-444",
+    age: 19,
+  },
+  {
+    firstName: "Jese",
+    lastName: "Joe",
+    email: "Jese@gmail.com",
+    phone: "555-555-555",
+    age: 23,
+  },
+];
+
+const youngPeople = people
+  .filter((person) => person.firstName && person.lastName && person.age <= 25)
+  .map((person) => {
+    return {
+      name: person.firstName + " " + person.lastName,
+      email: person.email,
+      age: person.age,
+    };
+  });
+console.log(youngPeople);
+
+// const youngPeople = [];
+// const genZ = people.forEach((person) => {
+//   if (person.firstName && person.lastName && person.age <= 25) {
+//     youngPeople.push(person);
+//   }
+// });
+
+// console.log(youngPeople);
+
+const numbers = [2, -30, 50, 20, -12, -19, 7];
+
+const positiveNum = numbers
+  .filter((number) => number > 0)
+  .reduce((acc, cur) => acc + cur, 0);
+
+console.log(positiveNum);
+
+const words = ["coder", "programmer", "developer"];
+
+const cWords = words.map((word) => {
+  return word[0].toUpperCase() + word.slice(1);
+});
+
+console.log(cWords);
+*/
