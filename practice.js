@@ -147,7 +147,7 @@ const social = ["Facebook", "Insta", "Gmail", "X"];
 
 social.forEach((social, index, arr) => console.log(`${index} - ${social}`));
 */
-
+/*
 const students = [
   {
     name: "Mike",
@@ -262,7 +262,7 @@ const students = [
     Dept: "Electrical Engineering",
   },
 ];
-
+*/
 // const femaleGender = students.filter((student) => student.Gender === "female");
 // console.log(femaleGender);
 
@@ -271,12 +271,32 @@ const students = [
 // });
 // console.log(femaleGender);
 
-let g = [];
+// let g = [];
 
-students.forEach((student) => {
-  if (student.Gender === "female") {
-    g.push(student);
-  }
-});
+// students.forEach((student) => {
+//   if (student.Gender === "female") {
+//     g.push(student);
+//   }
+// });
 
-console.log(g);
+// console.log(g);
+
+// const male200 = students.filter(
+//   (item) => item.Gender === "Male" && item.level === 200
+// );
+// console.log(male200);
+
+// let s = [];
+
+// students.forEach((student) => {
+//   if (student.Gender === "Male" && student.Regnum.includes("EEE")) {
+//     s.push(student);
+//   }
+// });
+
+// console.log(s);
+
+// const dept = students.filter(
+//   (student) => student.Regnum.includes("EEE") || student.Regnum.includes("CPE")
+// );
+// console.log(dept);

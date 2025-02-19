@@ -1757,7 +1757,7 @@ for (const key in colorArr) {
 
 //------------------------------------------------- Array.filter
 
-const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 // const evenNumbers = numbers.filter(function (number) {
 //   return number % 2 === 0;
@@ -1767,11 +1767,345 @@ const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 // const evenNumbers = numbers.filter((number) => number % 2 === 0);
 
 // Same wih forEach
-const evenNumbers = [];
-numbers.forEach((number) => {
-  if (number % 2 === 0) {
-    evenNumbers.push(number);
-  }
-});
+// const evenNumbers = [];
+// numbers.forEach((number) => {
+//   if (number % 2 === 0) {
+//     evenNumbers.push(number);
+//   }
+// });
 
-console.log(evenNumbers);
+// console.log(evenNumbers);
+
+/*
+const students = [
+  {
+    name: "Mike",
+    Gender: "Male",
+    level: 300,
+    Regnum: "CHM/11/133",
+    Dept: "Chemical Engineering",
+  },
+  {
+    name: "Mack",
+    Gender: "Male",
+    level: 100,
+    Regnum: "CVE/14/323",
+    Dept: "Civil Engineering",
+  },
+  {
+    name: "Esther",
+    Gender: "female",
+    level: 200,
+    Regnum: "MEC/12/111",
+    Dept: "Mechanical Engineering",
+  },
+  {
+    name: "Ego",
+    Gender: "female",
+    level: 300,
+    Regnum: "MEC/15/223",
+    Dept: "Mechanical Engineering",
+  },
+  {
+    name: "Aza",
+    Gender: "female",
+    level: 400,
+    Regnum: "MEC/13/453",
+    Dept: "Mechanical Engineering",
+  },
+  {
+    name: "Jack",
+    Gender: "Male",
+    level: 500,
+    Regnum: "CPE/12/623",
+    Dept: "Computer Engineering",
+  },
+  {
+    name: "Ann",
+    Gender: "female",
+    level: 500,
+    Regnum: "CHM/14/127",
+    Dept: "Chemical Engineering",
+  },
+  {
+    name: "Sarah",
+    Gender: "female",
+    level: 400,
+    Regnum: "EEE/15/165",
+    Dept: "Electronical Engineering",
+  },
+  {
+    name: "Endo",
+    Gender: "Male",
+    level: 300,
+    Regnum: "CVE/13/326",
+    Dept: "Civil Engineering",
+  },
+  {
+    name: "Saka",
+    Gender: "Male",
+    level: 100,
+    Regnum: "PTE/09/864",
+    Dept: "Petroluem Engineering",
+  },
+  {
+    name: "Moses",
+    Gender: "Male",
+    level: 100,
+    Regnum: "PET/09/864",
+    Dept: "Petroluem Engineering",
+  },
+  {
+    name: "Glory",
+    Gender: "female",
+    level: 400,
+    Regnum: "CVE/12/058",
+    Dept: "Civil Engineering",
+  },
+  {
+    name: "Mary",
+    Gender: "female",
+    level: 400,
+    Regnum: "CPE/13/048",
+    Dept: "Computer Engineering",
+  },
+  {
+    name: "Gift",
+    Gender: "female",
+    level: 500,
+    Regnum: "CHM/14/190",
+    Dept: "Chemical Engineering",
+  },
+  {
+    name: "Abah",
+    Gender: "Male",
+    level: 200,
+    Regnum: "CPE/17/099",
+    Dept: "Computer Engineering",
+  },
+  {
+    name: "Great",
+    Gender: "Male",
+    level: 200,
+    Regnum: "EEE/11/223",
+    Dept: "Electrical Engineering",
+  },
+];
+
+console.log(students);
+*/
+
+// const femaleGender = students.filter((student) => student.Gender === "female");
+// console.log(femaleGender);
+
+// const femaleGender = students.filter(function(student){
+//   return student.Gender === "female";
+// });
+// console.log(femaleGender);
+
+// let g = [];
+
+// students.forEach((student) => {
+//   if (student.Gender === "female") {
+//     g.push(student);
+//   }
+// });
+
+// console.log(g);
+
+// const male200 = students.filter(
+//   (item) => item.Gender === "Male" && item.level === 200
+// );
+// console.log(male200);
+
+// let s = [];
+
+// students.forEach((student) => {
+//   if (student.Gender === "Male" && student.Regnum.includes("EEE")) {
+//     s.push(student);
+//   }
+// });
+
+// console.log(s);
+
+// const dept = students.filter(
+//   (student) => student.Regnum.includes("EEE") || student.Regnum.includes("CPE")
+// );
+// console.log(dept);
+
+// ------------------------------------------------MAP
+
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// const doubleNumbers = numbers.map((number) => number * 2);
+// console.log(doubleNumbers);
+// console.log(numbers);
+
+// Same with forEach
+// let doubleNumbers = [];
+
+// numbers.forEach((number) => {
+//   doubleNumbers.push(number * 2);
+// });
+
+// console.log(doubleNumbers);
+
+const students = [
+  {
+    name: "Mike",
+    Gender: "Male",
+    level: 300,
+    Regnum: "CHM/11/133",
+    Dept: "Chemical Engineering",
+  },
+  {
+    name: "Mack",
+    Gender: "Male",
+    level: 100,
+    Regnum: "CVE/14/323",
+    Dept: "Civil Engineering",
+  },
+  {
+    name: "Esther",
+    Gender: "female",
+    level: 200,
+    Regnum: "MEC/12/111",
+    Dept: "Mechanical Engineering",
+  },
+  {
+    name: "Ego",
+    Gender: "female",
+    level: 300,
+    Regnum: "MEC/15/223",
+    Dept: "Mechanical Engineering",
+  },
+  {
+    name: "Aza",
+    Gender: "female",
+    level: 400,
+    Regnum: "MEC/13/453",
+    Dept: "Mechanical Engineering",
+  },
+  {
+    name: "Jack",
+    Gender: "Male",
+    level: 500,
+    Regnum: "CPE/12/623",
+    Dept: "Computer Engineering",
+  },
+  {
+    name: "Ann",
+    Gender: "female",
+    level: 500,
+    Regnum: "CHM/14/127",
+    Dept: "Chemical Engineering",
+  },
+  {
+    name: "Sarah",
+    Gender: "female",
+    level: 400,
+    Regnum: "EEE/15/165",
+    Dept: "Electronical Engineering",
+  },
+  {
+    name: "Endo",
+    Gender: "Male",
+    level: 300,
+    Regnum: "CVE/13/326",
+    Dept: "Civil Engineering",
+  },
+  {
+    name: "Saka",
+    Gender: "Male",
+    level: 100,
+    Regnum: "PTE/09/864",
+    Dept: "Petroluem Engineering",
+  },
+  {
+    name: "Moses",
+    Gender: "Male",
+    level: 100,
+    Regnum: "PET/09/864",
+    Dept: "Petroluem Engineering",
+  },
+  {
+    name: "Glory",
+    Gender: "female",
+    level: 400,
+    Regnum: "CVE/12/058",
+    Dept: "Civil Engineering",
+  },
+  {
+    name: "Mary",
+    Gender: "female",
+    level: 400,
+    Regnum: "CPE/13/048",
+    Dept: "Computer Engineering",
+  },
+  {
+    name: "Gift",
+    Gender: "female",
+    level: 500,
+    Regnum: "CHM/14/190",
+    Dept: "Chemical Engineering",
+  },
+  {
+    name: "Abah",
+    Gender: "Male",
+    level: 200,
+    Regnum: "CPE/17/099",
+    Dept: "Computer Engineering",
+  },
+  {
+    name: "Great",
+    Gender: "Male",
+    level: 200,
+    Regnum: "EEE/11/223",
+    Dept: "Electrical Engineering",
+  },
+];
+
+//  Create an array of Students names
+
+const studentsNames = students.map((student) => student.name);
+console.log(studentsNames);
+
+//  Create an array of Students names and department
+const studentsNamesDept = students.map((student) => {
+  return {
+    name: student.name,
+    dept: student.Dept,
+  };
+});
+console.log(studentsNamesDept);
+
+// CHAIN MAP METHODS
+
+// const sqaureroot = numbers
+//   .map((number) => Math.sqrt(number))
+//   .map((sqrt) => sqrt * 2)
+//   .map((times3) => times3 * 3);
+
+// console.log(sqaureroot);
+
+// Long VErsion
+/*
+const sqaureroot = numbers
+  .map(function (number) {
+    return Math.sqrt(number);
+  })
+  .map(function (sqrt) {
+    return sqrt * 2;
+  })
+  .map(function (times3) {
+    return times3 * 3;
+  });
+
+console.log(sqaureroot);
+*/
+
+// Chaining different methods
+const evenDouble = numbers
+  .filter((number) => number % 2 === 0)
+  .map((number) => number * 2);
+
+console.log(evenDouble);
