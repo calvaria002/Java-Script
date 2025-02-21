@@ -2332,3 +2332,40 @@ console.log(list);
 const firstItem = list.querySelector("li");
 firstItem.style.color = "blue";
 
+// ------------------------------------ DOM Selector (Multiple Element)
+
+// querySelectorAll()
+
+const listItems = document.querySelectorAll('.item');
+console.log(listItems[1].innerText);
+
+listItems[0].style.color = "red";
+
+// listItems.forEach((item, index) => {
+//   item.style.color = "red";
+
+//   if (index === 1){
+    
+//     item.remove();
+//   }
+
+// if (index === 0) {
+//   item.innerHTML = ` Apples
+//           <button class="remove-item btn-link text-red">
+//             <i class="fa-solid fa-xmark"></i>
+//           </button>`;
+// }
+// });
+
+const listItems2 = document.getElementsByClassName("Item");
+
+// console.log(listItems2[2].innerText);
+
+const listItemsArray = Array.from(listItems2);
+
+listItemsArray.forEach((item) => {
+  console.log(item.innerText);
+});
+
+const listItems3 = document.getElementsByTagName("li");
+console.log(listItems3[1]);
