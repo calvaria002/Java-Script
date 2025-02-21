@@ -2197,14 +2197,14 @@ const youngPeople = people
   });
 console.log(youngPeople);
 
-// const youngPeople = [];
-// const genZ = people.forEach((person) => {
-//   if (person.firstName && person.lastName && person.age <= 25) {
-//     youngPeople.push(person);
-//   }
-// });
+const youngPeople = [];
+const genZ = people.forEach((person) => {
+  if (person.firstName && person.lastName && person.age <= 25) {
+    youngPeople.push(person);
+  }
+});
 
-// console.log(youngPeople);
+console.log(youngPeople);
 
 const numbers = [2, -30, 50, 20, -12, -19, 7];
 
@@ -2221,4 +2221,62 @@ const cWords = words.map((word) => {
 });
 
 console.log(cWords);
+*/
+
+// ------------------------------------------------------DOM!!!!!!!!
+/*
+// // console.log(window);
+// // console.log(window.document);
+// // console.log(document.body.innerHTML);
+// // console.log(document.links[0]);
+// // document.body.innerHTML = "<h1> Dom Practice </h1>";
+// console.log(document.getElementById("main"));
+// const main = document.getElementById("main");
+// // main.innerHTML = "<h1> Hello from main </h1>";
+
+// document.querySelector("#main h1").innerText = "Hello";
+
+let output;
+
+output = document.all;
+output = document.all[11];
+output - document.all.length;
+
+output = document.documentElement;
+
+output = document.head;
+output = document.body;
+
+output = document.head.children;
+output = document.body.children;
+
+output = document.doctype;
+output = document.domain;
+output = document.URL;
+
+output = document.forms;
+output = document.forms[0];
+output = document.forms[0].id;
+output = document.forms[0].method;
+output = document.forms[0].action;
+
+// output = document.forms[0].id = "new-id";
+
+// output = document.links;
+// output = document.links[0];
+// output = document.links[0].href;
+// output = document.links[0].href = "https://google.com";
+// output = document.links[0].id = "google-link";
+// output = document.links[0].className = "google-class";
+// output = document.links[0].classList;
+
+// output = document.images;
+// output = document.images[0];
+// output = document.images[0].src;
+
+const forms = Array.from(document.forms);
+forms.forEach((form) => console.log(form));
+
+
+console.log(output);
 */

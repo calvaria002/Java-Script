@@ -300,3 +300,79 @@ const students = [
 //   (student) => student.Regnum.includes("EEE") || student.Regnum.includes("CPE")
 // );
 // console.log(dept);
+
+
+// const people = [
+//   {
+//     firstName: "John",
+//     lastName: "Doe",
+//     email: "John@gmail.com",
+//     phone: "111-111-111",
+//     age: 30,
+//   },
+//   {
+//     firstName: "Jane",
+//     lastName: "Poe",
+//     email: "Jane@gmail.com",
+//     phone: "222-222-222",
+//     age: 25,
+//   },
+//   {
+//     firstName: "Job",
+//     lastName: "Foe",
+//     email: "Job@gmail.com",
+//     phone: "333-333-333",
+//     age: 45,
+//   },
+//   {
+//     firstName: "Sara",
+//     lastName: "Soe",
+//     email: "sara@gmail.com",
+//     phone: "444-444-444",
+//     age: 19,
+//   },
+//   {
+//     firstName: "Jese",
+//     lastName: "Joe",
+//     email: "Jese@gmail.com",
+//     phone: "555-555-555",
+//     age: 23,
+//   },
+// ];
+
+// // const youngPeople = people
+// // .filter((person) =>  person.firstName && person.lastName && person.age <= 25)
+// // .map((person) =>{
+// //   return {
+// //     name: person.firstName + " " + person.lastName,
+// //     email: person.email,
+// //     age: person.age
+// //   };
+  
+// // });
+// // console.log(youngPeople);
+
+// let youngPeople = [];
+
+// const genZ = people.forEach((person) => {
+//   if ( person.firstName && person.lastName && person.age <= 25) {
+//     youngPeople.push(person)
+//   }
+// });
+// console.log(youngPeople);
+
+// const numbers = [2, -30, 50, 20, -12, -19, 7];
+
+// const positiveNum = numbers
+// .filter((number) => number >= 0)
+// .reduce((pre, cur) => pre + cur, 0);
+
+// console.log(positiveNum);
+
+// const words = ["coder", "programmer", "developer"];
+
+// const cWords = words.map((word) => {
+//   return word[0].toUpperCase() + word.slice(1);
+// })
+
+// console.log(cWords);
