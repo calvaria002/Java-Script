@@ -2412,40 +2412,88 @@ console.log(listItems3[1]);
 
 // console.log(output);
 
-// Traversing The Dom nodes
+// -------------------------------------- Traversing The Dom nodes
 
-let output;
+// let output;
 
-const parent = document.querySelector(".parent");
+// const parent = document.querySelector(".parent");
 
-output = parent.childNodes;
-output = parent.childNodes[0];
-output = parent.childNodes[0].nodeName;
-output = parent.childNodes[3].textContent;
-output = parent.childNodes[3].outerHTML;
+// output = parent.childNodes;
+// output = parent.childNodes[0];
+// output = parent.childNodes[0].nodeName;
+// output = parent.childNodes[3].textContent;
+// output = parent.childNodes[3].outerHTML;
 
-output = parent.childNodes[3].innerText = "child One";
-output = parent.childNodes[3].style.color = "red";
+// output = parent.childNodes[3].innerText = "child One";
+// output = parent.childNodes[3].style.color = "red";
 
-output = parent.firstChild;
-output = parent.lastChild;
+// output = parent.firstChild;
+// output = parent.lastChild;
 
-output = parent.lastChild.textContent = "Hello";
+// output = parent.lastChild.textContent = "Hello";
 
-// Parent Nodes
+// // Parent Nodes
 
-const child = document.querySelector(".child");
+// const child = document.querySelector(".child");
 
-output = child.parentNode;
-output = child.parentElement;
+// output = child.parentNode;
+// output = child.parentElement;
 
-child.parentNode.style.backgroundColor = "#ccc";
-child.parentNode.style.padding = "10px";
+// child.parentNode.style.backgroundColor = "#ccc";
+// child.parentNode.style.padding = "10px";
 
-// Siblings
-const secondItem = document.querySelector(".child:nth-child(2)");
+// // Siblings
+// const secondItem = document.querySelector(".child:nth-child(2)");
 
-output = secondItem.nextSibling;
-output = secondItem.previousSibling;
+// output = secondItem.nextSibling;
+// output = secondItem.previousSibling;
 
-console.log(output);
+// console.log(output);
+
+// ---------------------------------------Create and Append Elements
+
+const div = document.createElement("div");
+div.className = "my-element";
+div.id = "my-element";
+div.setAttribute("title", "My Element");
+
+// div.innerText = "Hello World";
+
+const text = document.createTextNode("Hello World");
+
+div.appendChild(text);
+
+// document.body.appendChild(div);
+
+// Quick and dirty
+function createListItem(item) {
+  const li = document.createElement("li");
+
+  li.innerHTML = `${item}
+          <button class="remove-item btn-link text-red">
+            <i class="fa-solid fa-xmark"></i>
+          </button>`;
+
+  document.querySelector(".items").appendChild(li);
+}
+
+// clean and performative
+
+function createNewItem(item) {
+  const li = document.createElement("li");
+  li.appendChild(document.createTextNode(item));
+
+  const icon = document.createElement("i");
+  icon.className = "fa-solid fa-xmark";
+
+  const button = document.createElement("button");
+  button.className = "remove-item btn-link text-red";
+
+  button.appendChild(icon);
+  li.appendChild(button);
+
+  document.querySelector(".items").appendChild(li);
+}
+
+createListItem("Lime");
+createNewItem("Peanuts");
