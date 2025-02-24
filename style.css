@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
 
 *,
 *::before,
@@ -39,6 +39,7 @@ header h1 {
 }
 
 /* Form & Input */
+/* 
 .form-input {
   width: 100%;
   font-size: 18px;
@@ -59,10 +60,10 @@ header h1 {
   border-bottom: 1px solid #ccc;
   background: transparent;
   outline: none;
-}
+} */
 
 /* Buttons */
-.btn {
+/* .btn {
   background-color: #333;
   color: #fff;
   border: none;
@@ -102,10 +103,10 @@ header h1 {
 
 .text-red {
   color: red;
-}
+} */
 
 /* Items */
-
+/* 
 .items {
   margin-top: 20px;
   display: flex;
@@ -128,4 +129,4 @@ header h1 {
   .items li {
     width: 100%;
   }
-}
+} */
